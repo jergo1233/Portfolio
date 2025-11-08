@@ -26,7 +26,7 @@ a {
   margin: auto;
   color: white;
 }
-#frame{
+#frames{
   padding-left:80px;
 }
 /* -------------------------------
@@ -399,6 +399,9 @@ input[type="button"]:hover {
     gap: 5px;
     padding: 5px;
   }
+  #frames{
+    padding-left: 5px;
+  }
 
   .navbar a {
     font-size: 0.9em;
@@ -470,5 +473,168 @@ input[type="button"]:hover {
   .frameworks .frame {
     font-size: 13px;
     padding: 7px 12px;
+  }
+}
+
+@media (max-width: 320px) {
+  .navbar {
+    gap: 5px;
+    padding: 5px;
+  }
+
+  .navbar a {
+    font-size: 0.9em;
+    padding: 3px 8px;
+  }
+
+  .container {
+    width: 95%;
+    padding: 0 5px;
+  }
+
+  .container h2 {
+    color: white;
+  }
+
+  .card p {
+    color: black;
+  }
+
+  #contact {
+    color: white;
+    text-align: justify;
+  }
+
+  /* Main Intro Profile Picture for small screens */
+  .header-content .profile-pic-container {
+    width: 180px;
+    height: 180px;
+  }
+
+  .text-info h1 {
+    font-size: 1.8em;
+  }
+
+  .text-info p {
+    font-size: 1em;
+  }
+
+  .header-content {
+    padding: 40px 15px;
+    gap: 20px;
+  }
+
+  /* About Me specific adjustments for small screens */
+  #aboutme .header-content {
+    padding: 10px 5px;
+    gap: 15px;
+  }
+
+  #aboutme .profile-pic-container {
+    width: 140px;
+    height: 140px;
+  }
+
+  /* Specific styling for the text within About Me section for small screens */
+  .text-info-about p {
+    padding: 0 0px;
+    font-size: 0.9em;
+    text-align: justify;
+  }
+
+  /* Frameworks (Other skills) for small screens */
+  .frameworks {
+    justify-content: center;
+    gap: 5px;
+    padding: 0 5px;
+  }
+
+  .frameworks .frame {
+    font-size: 13px;
+    padding: 7px 12px;
+  }
+  #frames{
+    padding-left: 5px;
+  }
+}
+@media (max-width: 375px) {
+  .navbar {
+    gap: 5px;
+    padding: 5px;
+  }
+
+  .navbar a {
+    font-size: 0.9em;
+    padding: 3px 8px;
+  }
+
+  .container {
+    width: 95%;
+    padding: 0 5px;
+  }
+
+  .container h2 {
+    color: white;
+  }
+
+  .card p {
+    color: black;
+  }
+
+  #contact {
+    color: white;
+    text-align: justify;
+  }
+
+  /* Main Intro Profile Picture for small screens */
+  .header-content .profile-pic-container {
+    width: 180px;
+    height: 180px;
+  }
+
+  .text-info h1 {
+    font-size: 1.8em;
+  }
+
+  .text-info p {
+    font-size: 1em;
+  }
+
+  .header-content {
+    padding: 40px 15px;
+    gap: 20px;
+  }
+
+  /* About Me specific adjustments for small screens */
+  #aboutme .header-content {
+    padding: 10px 5px;
+    gap: 15px;
+  }
+
+  #aboutme .profile-pic-container {
+    width: 140px;
+    height: 140px;
+  }
+
+  /* Specific styling for the text within About Me section for small screens */
+  .text-info-about p {
+    padding: 0 0px;
+    font-size: 0.9em;
+    text-align: justify;
+  }
+
+  /* Frameworks (Other skills) for small screens */
+  .frameworks {
+    justify-content: center;
+    gap: 5px;
+    padding: 0 5px;
+  }
+
+  .frameworks .frame {
+    font-size: 13px;
+    padding: 7px 12px;
+  }
+  #frames{
+    padding-left: 5px;
   }
 }
