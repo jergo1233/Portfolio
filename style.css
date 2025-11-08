@@ -1,0 +1,471 @@
+/* -------------------------------
+   Base Styles
+------------------------------- */
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  background-color: #1a1c2c;
+  color: #2c3e50;
+  transition: background-color 1s ease;
+  padding-top: 60px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container {
+  width: 85%;
+  max-width: 1100px;
+  margin: auto;
+  color: white;
+}
+
+/* -------------------------------
+   Header
+------------------------------- */
+.navbar {
+  background-color: #00063b;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-family: sans-serif;
+  position: fixed; /* stays on top */
+  top: 0; /* stick to top */
+  left: 0;
+  z-index: 1000; /* ensures it stays above other content */
+  padding: 10px 20px; /* optional padding */
+}
+
+
+
+.navbar .title {
+  margin-right: auto;
+  font-weight: bold;
+  color: white;
+}
+
+.navbar a {
+  color: #f1c40f;
+  font-weight: bold;
+  transition: color 0.3s ease;
+  text-decoration: none; /* optional, removes underline */
+}
+
+.navbar a:hover {
+  color: white;
+}
+.navbar .title {
+  margin-right: auto;
+  font-weight: bold;
+  color: white;
+}
+
+/* -------------------------------
+   Header Content (Main Intro Section)
+------------------------------- */
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 100px 40px;
+  gap: 80px;
+  color: white;
+}
+
+.social-icons a img {
+  width: 25px;
+  height: 25px;
+  transition: transform 0.3s ease;
+}
+
+.social-icons a img:hover {
+  transform: scale(1.2);
+}
+
+.text-info {
+  flex: 1 1 300px;
+  color: white;
+}
+
+.text-info p {
+  font-size: 1.3em;
+}
+
+#typing {
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typing 1s steps(34, end), blink 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 50ch; }
+}
+
+#fade {
+  opacity: 0;
+  transform: translateX(-30px);
+  animation: fadeLeft 1s ease-out forwards;
+}
+
+@keyframes fadeLeft {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+/* -------------------------------
+   Profile Picture (Big + Animated Border)
+------------------------------- */
+.profile-pic-container {
+  border: 4px solid white;
+  border-radius: 50%;
+  animation: pulse-border 2s infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#profile {
+  
+  width: 100%;
+  height: 100%;
+  border: 4px solid white;
+  object-fit: cover;
+  border-radius: 50%;
+  filter: drop-shadow(0 0 10px #00f0ff) drop-shadow(0 0 10px #00f0ff);
+  box-shadow: 0 0 10px 0px #00f0ff, 0 0 10px 0px #00f0ff;
+  transition: 0.3s ease;
+}
+
+#profile:hover {
+  box-shadow: 0 0 20px 0px #00f0ff, 0 0 30px 0px #00f0ff;
+}
+
+/* -------------------------------
+   Sections
+------------------------------- */
+.section {
+  
+  display: block;
+  padding: 40px 0;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.card {
+  background: whitesmoke;
+  padding: 20px;
+  margin: 15px 0;
+  border-left: 5px solid #3498db;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  color: black;
+}
+.card p{
+  color:black; 
+}
+
+/* -------------------------------
+   Skills
+------------------------------- */
+.pogi {
+   background-size: cover;
+   background-position: center;
+   background-color: transparent;
+ }
+.skill-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.skill-table td {
+  vertical-align: top;
+  padding: 10px;
+}
+
+.skill {
+  margin: 15px 0;
+  width: 100%;
+  flex: 1;
+}
+
+.fill {
+  height: 100%;
+  background-color: #3498db;
+  width: 0%;
+  border-radius: 10px;
+  transition: width 2s ease;
+}
+
+/* -------------------------------
+   Footer
+------------------------------- */
+footer {
+  background-color: #2c3e50;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 40px;
+}
+
+/* -------------------------------
+   Button Styles
+------------------------------- */
+input[type="button"] {
+  background-color: blueviolet;
+  color: white;
+  border-radius: 20px;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
+
+input[type="button"]:hover {
+  border-color: blue;
+  color: greenyellow;
+  background-color: grey;
+  border-left-color: cyan;
+  border-block-start-color: pink;
+}
+
+/* -------------------------------
+   Logo Container (within Skills)
+------------------------------- */
+.logo-container {
+  padding: 10px;
+  position: relative;
+  border-radius: 20px;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.logo-text {
+  font-size: 1em;
+  font-weight: bold;
+  color: #ffffff;
+  text-align: center;
+  text-shadow: 0 0 10px #38bdf8, 0 0 20px #0ea5e9;
+  position: relative;
+  z-index: 2;
+}
+
+
+@keyframes move {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(100%); }
+}
+
+/* -------------------------------
+   Frameworks (Skills/Others) Section
+------------------------------- */
+.frameworks {
+  display: flex;
+  
+  flex-wrap: wrap;
+  padding: 0 20px;
+  margin-bottom: 20px;
+  
+  margin:20px;
+}
+
+.frame {
+  background-color: lightblue;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 16px;
+  transition: transform 0.2s;
+  flex-shrink: 0;
+}
+
+.frame:hover {
+  transform: scale(1.05);
+}
+
+.frame img {
+  width: 20px;
+  height: 20px;
+}
+
+/* -------------------------------
+   Responsive Styles
+------------------------------- */
+@media (max-width: 768px) {
+  .navbar {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .navbar .title {
+    margin-right: 0;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .navbar a {
+    flex-basis: auto;
+    padding: 5px 10px;
+  }
+
+  /* Main Intro Header Content */
+  .header-content {
+    flex-direction: column;
+    text-align: center;
+    padding: 60px 20px;
+    gap: 40px;
+  }
+
+  /* Main Intro Profile Picture */
+  .header-content .profile-pic-container {
+    width: 220px;
+    height: 220px;
+  }
+
+  .text-info h1 {
+    font-size: 2em;
+  }
+
+  .text-info p {
+    font-size: 1.1em;
+  }
+
+  .skill-table td {
+    display: block;
+    width: 100%;
+  }
+
+  .pogi {
+    margin-top: 30px;
+  }
+
+  /* About Me specific adjustments for medium screens */
+  #aboutme .header-content {
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px;
+  }
+
+  #aboutme .profile-pic-container {
+    width: 180px;
+    height: 180px;
+  }
+
+  /* Specific styling for the text within About Me section */
+  .text-info-about p {
+    text-align: justify;
+    padding: 0 10px;
+  }
+
+  /* Frameworks (Other skills) for medium screens */
+  .frameworks {
+    justify-content: center;
+    gap: 8px;
+    padding: 0 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    gap: 5px;
+    padding: 5px;
+  }
+
+  .navbar a {
+    font-size: 0.9em;
+    padding: 3px 8px;
+  }
+
+  .container {
+    width: 95%;
+    padding: 0 5px;
+  }
+
+  .container h2 {
+    color: white;
+  }
+
+  .card p {
+    color: black;
+  }
+
+  #contact {
+    color: white;
+    text-align: justify;
+  }
+
+  /* Main Intro Profile Picture for small screens */
+  .header-content .profile-pic-container {
+    width: 180px;
+    height: 180px;
+  }
+
+  .text-info h1 {
+    font-size: 1.8em;
+  }
+
+  .text-info p {
+    font-size: 1em;
+  }
+
+  .header-content {
+    padding: 40px 15px;
+    gap: 20px;
+  }
+
+  /* About Me specific adjustments for small screens */
+  #aboutme .header-content {
+    padding: 10px 5px;
+    gap: 15px;
+  }
+
+  #aboutme .profile-pic-container {
+    width: 140px;
+    height: 140px;
+  }
+
+  /* Specific styling for the text within About Me section for small screens */
+  .text-info-about p {
+    padding: 0 0px;
+    font-size: 0.9em;
+    text-align: justify;
+  }
+
+  /* Frameworks (Other skills) for small screens */
+  .frameworks {
+    justify-content: center;
+    gap: 5px;
+    padding: 0 5px;
+  }
+
+  .frameworks .frame {
+    font-size: 13px;
+    padding: 7px 12px;
+  }
+}
