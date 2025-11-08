@@ -26,7 +26,9 @@ a {
   margin: auto;
   color: white;
 }
-
+#frame{
+  padding-left:80px;
+}
 /* -------------------------------
    Header
 ------------------------------- */
@@ -75,10 +77,10 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 100px 40px;
-  gap: 63px;
+  padding: 150px;
+  padding-top: 30px;
+  gap: 80px;
   color: white;
-   margin: 20px;
 }
 
 .social-icons a img {
